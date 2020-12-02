@@ -1,0 +1,71 @@
+.acquaintment {
+  position: relative;
+  top: 60px;
+  width: 100vw;
+  height: 780px;
+  
+
+  display: grid;
+  grid-template-columns: 414px auto;
+  grid-template-rows: 270px auto;
+  grid-template-areas:
+  "header header"
+  "image container_text"; 
+
+  padding: 0 30px;
+
+  &__header {
+    margin-top: 167px;
+    justify-self: center;
+    grid-area: header;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -0.0097em;
+    transform: translateX(-7px);
+  }
+
+  &__img {
+    grid-area: image;
+    height: 286px;
+    margin-left: 25px;
+    margin-top: 7px;
+  }
+
+  // &__container {
+  //   grid-area: container_text;
+  // }
+
+  &__text_1 {
+    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__text_2 {
+   margin-top: 22px;
+   width: 551px;
+   text-align: justify;
+  }
+
+  &__text_3 {
+    margin-top: 24px;
+    width: 551px;
+    text-align: justify;
+  }
+
+  &__button {
+    margin-top: 28px;
+    padding-left: 2px;
+
+
+
+    color: #ef5b4c;
+    background-color: white;
+    border: none
+   }
+
+  &__button:hover {
+    cursor: pointer;
+    color: #df594a;
+  }
+}

@@ -1,0 +1,50 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1024px;
+  min-height: 1115px;
+
+  background-color: #f9f9f3;
+  
+  &__header {
+    margin-top: 155px;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 75px 15px 0;
+    max-height: 667px;
+  }
+
+  &__button{
+    width: 210px;
+    height: 40px;
+    margin-bottom: 140px;
+
+    background-color: #ef5b4c;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transform: translateX(-1px);
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    background-color: #df594a;
+  }
+
+  &__button:focus,
+  &__button:active {
+    outline: none;
+  }
+}
