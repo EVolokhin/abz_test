@@ -1,34 +1,38 @@
-.signup-form {
+.signup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1070px;
-  width: 1024px;
+  min-height: 1070px;
+  // width: 1024px;
+  max-width: 1170px;
   padding-top: 157px;
 
   &__header {
     font-size: 50px;
     font-weight: 400;
     line-height: 44px;
-    transform: translateX(-3px);
   }
 
   &__text {
-    margin-top: 22px;
-    margin-bottom: 28px;
+    margin: 23px 0 28px 5px;
     width: 450px;
     text-align: center;
     transform: translateX(-2px);
-   }
+  }
+}
 
+.signup-form {
   &__container{
     display: flex;
     flex-direction: column;
     margin-bottom: 19px;
-    transform: translateX(-3px);
   }
 
-  &__name {
+  &__error {
+    color: #ef5b4c;
+  }
+
+    &__name {
     margin-bottom: 7px;
 
     margin-left: 1px;
@@ -43,12 +47,89 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    cursor: pointer;
   }
 
-  &__button{
+  &__input:focus {
+    outline: none;
+    border: 1px solid rgb(114, 174, 241);
+    box-shadow: 0 0 5px rgb(114,174,241);
+  }
+
+  &__radio {
+    margin-bottom: 14px;
+  }
+
+  &__radio-text {
+    margin-top: 43px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  &__radio-container {
+    margin-top: 12px;
+    transform: translateX(-1px);
+  }
+
+  &__radio-input {
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &__radio-input+label {
+    display: inline-flex;
+    margin-top: 6px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__radio-input+ label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  &__radio-input:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+
+  &__radio-input:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+
+  &__radio-input:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  } 
+
+  &__radio-input:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+  }
+
+  &__radio-input:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4' fill='%23fff'/%3e%3c/svg%3e");
+  }
+
+  &__radio-input:disabled+label::before {
+    background-color: #e9ecef;
+  }
+
+  &__button {
     width: 210px;
-    height: 40px;
-    margin: 40px 0 160px;
+    height: 38px;
+    margin: 34px 0 160px 128px;
 
     background-color: #ef5b4c;
     color: white;

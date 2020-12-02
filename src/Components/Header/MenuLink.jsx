@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const MenuLink = ({ name }) => (
-  <li className="header__link">
+export const MenuLink = ({ name, className }) => (
+  <li className={className}>
     <a href="#signUp">
       {` ${name} `}
     </a>
@@ -11,4 +11,5 @@ export const MenuLink = ({ name }) => (
 
 MenuLink.propTypes = {
   name: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };

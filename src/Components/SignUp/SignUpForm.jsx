@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormik } from 'formik';
 import { FormInput } from './FormInput';
+import { FormInputFile } from './FormInputFile';
 import { FormRadioInput } from './RadioInput';
 import { inputsData } from './inputData';
 import { Button } from '../Button/Button';
@@ -27,16 +28,17 @@ export const SignupForm = ({ setUsers }) => {
   });
 
   return (
-    <form>
+    <form className="signup__form">
       <FormInput
         key={inputsData.name.id}
         data={inputsData.name}
         value={formik.values.name}
         handleChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        error={formik.errors.name}
       />
       {formik.touched.name && formik.errors.name
-        ? <div>{formik.errors.name}</div>
+        ? <div className="signup-form__error">{formik.errors.name}</div>
         : null}
 
       <FormInput
@@ -45,9 +47,10 @@ export const SignupForm = ({ setUsers }) => {
         value={formik.values.email}
         handleChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        error={formik.errors.email}
       />
       {formik.touched.email && formik.errors.email
-        ? <div>{formik.errors.email}</div>
+        ? <div className="signup-form__error">{formik.errors.email}</div>
         : null}
 
       <FormInput
@@ -56,9 +59,10 @@ export const SignupForm = ({ setUsers }) => {
         value={formik.values.phone}
         handleChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        error={formik.errors.phone}
       />
       {formik.touched.phone && formik.errors.phone
-        ? <div>{formik.errors.phone}</div>
+        ? <div className="signup-form__error">{formik.errors.phone}</div>
         : null}
 
       <FormRadioInput
@@ -68,22 +72,23 @@ export const SignupForm = ({ setUsers }) => {
         onBlur={formik.handleBlur}
       />
       {formik.touched.position && formik.errors.position
-        ? <div>{formik.errors.position}</div>
+        ? <div className="signup-form__error">{formik.errors.position}</div>
         : null}
 
-      <FormInput
+      <FormInputFile
         key={inputsData.photo.id}
         data={inputsData.photo}
         value={formik.values.photo}
         handleChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        error={formik.errors.photo}
       />
       {formik.touched.photo && formik.errors.photo
-        ? <div>{formik.errors.photo}</div>
+        ? <div className="signup-form__error">{formik.errors.photo}</div>
         : null}
 
       <Button
-        text="Sign up now"
+        text="Sing up now"
         name="form button"
         type="submit"
         action={formik.handleSubmit}

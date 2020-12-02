@@ -9,7 +9,7 @@ const fetchPositions = async(setState) => {
   setState(positions);
 };
 
-export const FormRadioInput = ({ handleChange, onBlur }) => {
+export const FormRadioInput = React.memo(({ handleChange, onBlur }) => {
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
@@ -17,11 +17,11 @@ export const FormRadioInput = ({ handleChange, onBlur }) => {
   }, []);
 
   return (
-    <>
-      <p>
+    <div className="signup-form__radio">
+      <p className="signup-form__radio-text">
         Select your position
       </p>
-      <div>
+      <div className="signup-form__radio-container">
         {positions.map((position) => {
           const { id, name } = position;
 
@@ -35,6 +35,7 @@ export const FormRadioInput = ({ handleChange, onBlur }) => {
                 value={id}
                 onChange={handleChange}
                 onBlur={onBlur}
+                className="signup-form__radio-input"
               />
               <label htmlFor={id}>
                 {name}
@@ -44,9 +45,9 @@ export const FormRadioInput = ({ handleChange, onBlur }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
-};
+});
 
 FormRadioInput.propTypes = {
   handleChange: PropTypes.func.isRequired,

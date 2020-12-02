@@ -10,6 +10,9 @@
   width: 100vw;
   padding: 15px 23.5px;
 
+  // max-width: 1024px;
+  max-width: 1170px;
+
   background-color:white;
   z-index: 1;
 
@@ -31,7 +34,7 @@
   }
 
   &__link a {
-    margin-right: 25px;
+    // margin-right: 21px;
     color:black;
     text-decoration: none;
     font-size: 15px;
@@ -39,25 +42,27 @@
   }
 
   &__link:nth-child(2) {
-    margin-left: 4px;
+    margin-left: 28px;
   }
   
   &__link:nth-child(3) {
-    margin-left: 3px;
+    margin-left: 28px;
   }
 
   &__link:nth-child(4) {
-    margin-left: 2px;
+    margin-left: 28px;
   }
 
   &__link:nth-child(5) {
-    margin-left: 3px;
+    margin-left: 28px;
+    margin-right: 7px;
   }
 
   &__burger {
     display: none;
     position: absolute;
-    right: 50px;
+    right: 24px;
+    top: 19px;
 
     background-color: white;
     border: none;

@@ -16,7 +16,11 @@ export const Header = ({ toggleOpen }) => (
     />
     <ul className="header__list">
       {linkNamesHeader.map(name => (
-        <MenuLink key={name} name={name} />
+        <MenuLink
+          key={name}
+          name={name}
+          className="header__link"
+        />
       ))}
     </ul>
 

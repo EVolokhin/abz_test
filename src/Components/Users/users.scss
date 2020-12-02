@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1024px;
-  min-height: 1115px;
+  // max-width: 1024px;
+  max-width: 1170px;
+  // min-height: 1115px;
 
   background-color: #f9f9f3;
   
   &__header {
     margin-top: 155px;
+
     font-size: 50px;
     line-height: 50px;
     font-weight: 400;
@@ -22,20 +24,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 75px 15px 0;
-    max-height: 667px;
+    padding-top: 75px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   &__button{
     width: 210px;
     height: 40px;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
 
     background-color: #ef5b4c;
     color: white;
     border-radius: 5px;
     border: none;
-    transform: translateX(-1px);
+    transform: translateY(-78px);
   }
 
   &__button:hover {

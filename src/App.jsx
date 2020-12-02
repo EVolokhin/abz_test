@@ -17,11 +17,6 @@ const fetchUsers = async(usersPage, setUsers, setTotalPages) => {
   const data = response.users;
   const totalPages = response.total_pages;
 
-  // eslint-disable-next-line no-console
-  console.log(data);
-
-  // setUsers(data);
-  // setUsers([...currentUsers, ...data]);
   setUsers(prev => [...prev, ...data]);
   setTotalPages(totalPages);
 };
@@ -44,9 +39,6 @@ export const App = () => {
     setIsHideMenu(!isHideMenu);
   };
 
-  // console.log(users); // list of users
-  // console.log(totalPages) // pages
-
   return (
     <>
       <Header toggleOpen={toggleOpen} />
@@ -66,7 +58,7 @@ export const App = () => {
 
       <SignUp setUsers={setUsers} />
 
-      <footer>
+      <footer className="footer">
         &copy; abz.agency specially for the test task
       </footer>
     </>

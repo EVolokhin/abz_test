@@ -1,0 +1,65 @@
+.file {
+display: flex;
+flex-direction: column;
+align-content: flex-start;
+
+  &__input {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__name{
+    margin-left: -1px;
+    font-weight: 400;
+  }
+
+  &__wrapper{
+    width: 100%;
+    position: relative;
+    margin: 6px 0;
+  }
+
+  &__input-wrapper{
+    height: 37px;
+    width: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    background-color: grey;
+
+  }
+  &__input-button{
+    display: flex;
+    height: 39px;
+    width: 467px;
+    align-items: center;
+
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__input-button:hover {
+    outline: none;
+    border: 1px solid rgb(114, 174, 241);
+    box-shadow: 0 0 5px rgb(114,174,241);
+  }
+
+  &__input-text{
+    width: 371px;
+    margin-left: 12px;
+    margin-top: 3px;
+
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.005em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:grey;
+    background-color: white;
+  }
+}
