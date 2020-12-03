@@ -20,7 +20,6 @@
     position: absolute;
     left: 30px;
     top: 20px;
-    
   }
 
   &__list {
@@ -80,6 +79,20 @@
 
     &__list {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    height: 39px;
+
+    &__img {
+      left: 15px;
+      top: 11px;
+    }
+    
+    &__burger {
+      right: 9px;
+      top: 9px;
     }
   }
 }

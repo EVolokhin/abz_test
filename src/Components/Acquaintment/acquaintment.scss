@@ -35,19 +35,19 @@
   //   grid-area: container_text;
   // }
 
-  &__text_1 {
+  &__text-1 {
     margin-top: 6px;
     font-size: 24px;
     font-weight: 400;
   }
 
-  &__text_2 {
+  &__text-2 {
    margin-top: 22px;
    max-width: 551px;
    text-align: justify;
   }
 
-  &__text_3 {
+  &__text-3 {
     margin-top: 24px;
     max-width: 551px;
     text-align: justify;
@@ -66,5 +66,84 @@
   &__button:hover {
     cursor: pointer;
     color: #df594a;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: -40px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+    z-index: 0;
+    background-color: white;
+
+    &__header {
+      font-size: 40px;
+      margin-top: 123px;
+    }
+
+    &__img {
+      height: 208px;
+      margin-left: 1px;
+      margin-top: 81px;
+    }
+  
+  
+    &__text-1 {
+      margin-top: 80px;
+      margin-left: 29px;
+
+    }
+  
+    &__text-2 {
+     margin-left: 29px;
+     }
+  
+    &__text-3 {
+      margin-left: 29px;
+      word-spacing: -2px;
+    }
+  
+    &__button {
+      margin-left: 29px;
+      margin-bottom: 73px;
+     }
+  }
+
+  @media screen and (max-width: 568px) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__header {
+      font-size: 30px;
+      margin-top: 80px;
+    }
+
+    &__img {
+      height: 244px;
+      margin-left: 1px;
+      margin-top: 38px;
+      margin-bottom: 0;
+    }
+
+    &__text-1 {
+      margin: 38px 0px 22px 8px;
+    }
+
+    &__text-2 {
+      margin: 0 2px 24px 5px;
+    }
+
+    &__text-3 {
+      margin: 0 2px 0 5px;
+    }
+
+    &__button {
+      margin-left: calc(50% - 50px);
+      margin-right: calc(50% - 50px);
+     }
   }
 }

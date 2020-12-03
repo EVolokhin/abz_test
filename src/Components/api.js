@@ -7,8 +7,6 @@ const POSITIONS_URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/po
 
 const TOKEN_URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/token';
 
-const usersOnPage = 6;
-
 const request = async(url, options) => {
   const result = await fetch(`${url}`, options);
 
@@ -19,7 +17,7 @@ const request = async(url, options) => {
   return result.json();
 };
 
-export const requestUsers = async(page) => {
+export const requestUsers = async(page, usersOnPage) => {
   try {
     const result = await request(`${USERS_URL}?page=${page}&count=${usersOnPage}`);
 

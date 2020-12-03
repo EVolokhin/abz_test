@@ -6,8 +6,6 @@
 
   max-width: 1170px;
 
-
-
   background-image: url(../../Assets/banner-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,8 +20,6 @@
     line-height: 54px;
     text-transform: uppercase;
     letter-spacing: -0.03rem;
-
-
   }
 
   &__text {
@@ -31,7 +27,6 @@
     width: 530px;
     
     color: white;
-    text-overflow: ellipsis;
   }
 
   &__button{
@@ -59,22 +54,69 @@
 
   @media screen and (max-width: 768px) {
     height: 600px;
+    z-index: -1;
 
     &__header {
       width: 410px;
+      padding: 0;
+      margin-bottom: 30px;
       font-size: 40px;
-      transform: translateY(-47px);
       line-height: 43px;
-      // transform: translateX(-10px);
     }
 
     &__text {
-      width: 455px;
-      transform: translateY(-40px);
+      width: 480px;
+      padding: 0;
     }
 
     &__button{
+      margin-bottom: 0;
+    }
+  }
 
+  @media screen and (max-width: 568px) {
+    display: flex;
+    top: 40px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px;
+    min-height: 440px;
+    height: 100vw;
+
+    &__header {
+      width: auto;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 71px;
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    &__header::after {
+      content: 'We kindly remind you that your test assignment should be submitted as a link to github/bitbucket repository.';
+      display: block;
+      // position: absolute;
+
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 330px;
+      font-size: 16px;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 24px;
+      // top: 190px;
+      // left: 15px;
+    }
+    
+    &__text {
+      display: none;
+    }
+
+    &__button{
+      position: absolute;
+      bottom: 95px;
+      margin-bottom: 20px;
     }
   }
 }

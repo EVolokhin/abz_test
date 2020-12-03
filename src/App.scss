@@ -13,22 +13,17 @@ html * {
   line-height: 24px;
 }
 
-// .app {
-//   max-width: 1170px;
-// }
-  
-  @media screen and (min-width: 1170px) {
-    body {
-      padding-left: calc(50% - 585px);
-      padding-right: calc(50% - 585px);
-    }
-  }
-
 .footer {
   padding-top: 15px;
   text-align: center;
-  // max-width: 1024px;
   max-width: 1170px;
   height: 55px;
 }
+
+@media screen and (min-width: 1170px) {
+  body {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+    }
+  }
 

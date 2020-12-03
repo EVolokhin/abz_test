@@ -14,14 +14,14 @@ export const Acquaintment = () => (
       alt="men with laptop"
     />
     <div className="acquaintment__container">
-      <h3 className="acquaintment__text_1">I am cool frontend developer</h3>
-      <p className="acquaintment__text_2">
+      <h3 className="acquaintment__text-1">I am cool frontend developer</h3>
+      <p className="acquaintment__text-2">
         We will evaluate how clean your approach to
         writing CSS and Javascript code is.
         You can use any CSS and Javascript
         3rd party libraries without any restriction.
       </p>
-      <p className="acquaintment__text_3">
+      <p className="acquaintment__text-3">
         If 3rd party css/javascript libraries are added to the project via
         bower/npm/yarn you will get bonus points. If you use any task runner
         (gulp/webpack) you will get bonus points as well.

@@ -10,26 +10,39 @@ import { SignUp } from './Components/SignUp/SignUp';
 
 import './App.scss';
 
-// import { Switch, Link, Route } from 'react-router-dom';
-
-const fetchUsers = async(usersPage, setUsers, setTotalPages) => {
-  const response = await requestUsers(usersPage);
-  const data = response.users;
-  const totalPages = response.total_pages;
-
-  setUsers(prev => [...prev, ...data]);
-  setTotalPages(totalPages);
-};
-
 export const App = () => {
   const [users, setUsers] = useState([]);
   const [usersPage, setUsersPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [isHideMenu, setIsHideMenu] = useState(true);
+  const [usersOnPage, setUsersOnPage] = useState(6);
+
+  window.addEventListener('resize', () => {
+    const contorlWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+    if (contorlWidth < 400) {
+      setUsersOnPage(3);
+    }
+
+    if (contorlWidth > 410) {
+      setUsersOnPage(6);
+    }
+  });
 
   useEffect(() => {
-    fetchUsers(usersPage, setUsers, setTotalPages);
+    fetchUsers(usersPage, setUsers, setTotalPages, usersOnPage, setUsersOnPage);
   }, [usersPage]);
+
+  useEffect(async() => {
+    const response = await requestUsers(usersPage, usersOnPage);
+    const data = response.users;
+    const Pages = response.total_pages;
+
+    setUsers(data);
+    setTotalPages(Pages);
+  }, [usersOnPage]);
 
   const handlePage = () => {
     setUsersPage(prevPage => prevPage + 1);
@@ -43,7 +56,7 @@ export const App = () => {
     <>
       <Header toggleOpen={toggleOpen} />
 
-      <Menu isHide={isHideMenu} />
+      <Menu isHide={isHideMenu} toggleOpen={toggleOpen} />
 
       <Assignment />
 
@@ -63,4 +76,18 @@ export const App = () => {
       </footer>
     </>
   );
+};
+
+const fetchUsers = async(
+  usersPage,
+  setUsers,
+  setTotalPages,
+  usersOnPage,
+) => {
+  const response = await requestUsers(usersPage, usersOnPage);
+  const data = response.users;
+  const totalPages = response.total_pages;
+
+  setUsers(prev => [...prev, ...data]);
+  setTotalPages(totalPages);
 };

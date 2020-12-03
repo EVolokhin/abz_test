@@ -62,4 +62,10 @@ align-content: flex-start;
     color:grey;
     background-color: white;
   }
+
+  @media screen and (max-width: 568px) {
+    &__input-button {
+      width: 328px;
+    }
+  }
 }

@@ -6,7 +6,7 @@ import { linkNamesMenu1, linkNamesMenu2, linkNamesMenu3 } from '../linkNames';
 
 import './menu.scss';
 
-export const Menu = ({ isHide }) => (
+export const Menu = ({ isHide, toggleOpen }) => (
   <section
     hidden={isHide}
     className="nav-menu"
@@ -24,6 +24,7 @@ export const Menu = ({ isHide }) => (
           key={name}
           name={name}
           className="nav-menu__link"
+          toggleOpen={toggleOpen}
         />
       ))}
     </ul>
@@ -34,6 +35,7 @@ export const Menu = ({ isHide }) => (
           key={name}
           name={name}
           className="nav-menu__link"
+          toggleOpen={toggleOpen}
         />
       ))}
     </ul>
@@ -44,6 +46,7 @@ export const Menu = ({ isHide }) => (
           key={name}
           name={name}
           className="nav-menu__link"
+          toggleOpen={toggleOpen}
         />
       ))}
     </ul>
@@ -52,4 +55,5 @@ export const Menu = ({ isHide }) => (
 
 Menu.propTypes = {
   isHide: PropTypes.bool.isRequired,
+  toggleOpen: PropTypes.func.isRequired,
 };

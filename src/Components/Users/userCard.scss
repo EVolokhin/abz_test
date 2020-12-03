@@ -43,4 +43,12 @@
   &__phone {
     margin-bottom: 80px;
   }
+
+  @media screen and (max-width: 370px) {
+    min-height: 260px ;
+  }
+
+  &__phone {
+    margin-bottom: 30px;
+  }
 }

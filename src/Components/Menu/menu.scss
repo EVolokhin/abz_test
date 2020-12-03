@@ -1,7 +1,8 @@
 .nav-menu {
-  position: absolute;
+  position: fixed;
   top: 60px;
-  background-color: white;
+  width: 230px;
+background-color: white;
   transform: translateX(-250px);
   animation: show 1s linear forwards;
   z-index: 2;
@@ -35,11 +36,13 @@
   &__list {
     width: 230px;
     margin-bottom: 15px;
+
   }
 
   &__link {
     list-style-type: none;
     margin-bottom: 3px;
+    opacity: 100%;
   }
 
   &__link a {
@@ -49,4 +52,7 @@
     letter-spacing: -0.45px ;
   }
 
+  @media screen and (max-width: 568px) {
+    top: 40px;
+  }
 }
