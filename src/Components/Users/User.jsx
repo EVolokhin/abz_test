@@ -1,5 +1,6 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { userShape } from './userShape';
 
 import './userCard.scss';
 
@@ -38,11 +39,5 @@ export const User = ({ user }) => {
 };
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    position: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired,
-  }.isRequired).isRequired,
+  user: userShape,
 };

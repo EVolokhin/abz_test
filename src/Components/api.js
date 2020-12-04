@@ -87,7 +87,7 @@ export const postSignupForm = async(values, setUsers) => {
 
     fetchNewUser(setUsers);
 
-    return postForm.json();
+    return postForm;
   } catch (error) {
     alert('SignupForm post error');
     console.log(error);

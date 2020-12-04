@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { UsersList } from './UsersList';
 import { Button } from '../Button/Button';
+import { userShape } from './userShape';
 
 import './users.scss';
 
@@ -29,13 +29,7 @@ export const Users = ({ users, usersPage, totalPages, handlePage }) => (
 );
 
 Users.propTypes = {
-  users: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    position: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired,
-  }.isRequired).isRequired).isRequired,
+  users: PropTypes.arrayOf(userShape).isRequired,
   usersPage: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   handlePage: PropTypes.func.isRequired,

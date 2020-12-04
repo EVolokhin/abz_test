@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { inputTypes } from './inputPropTypes';
 
 import './formInputFile.scss';
 
@@ -33,13 +33,4 @@ export const FormInputFile = ({ data, value, handleChange, onBlur }) => {
   );
 };
 
-FormInputFile.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-  }.isRequired).isRequired,
-  value: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  onBlur: PropTypes.func.isRequired,
-};
+FormInputFile.propTypes = inputTypes;

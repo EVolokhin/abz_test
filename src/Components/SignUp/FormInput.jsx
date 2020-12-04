@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { inputTypes } from './inputPropTypes';
 
 export const FormInput = ({ data, value, handleChange, onBlur }) => {
   const { id, name, type, placeholder } = data;
@@ -23,13 +23,4 @@ export const FormInput = ({ data, value, handleChange, onBlur }) => {
   );
 };
 
-FormInput.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-  }.isRequired).isRequired,
-  value: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  onBlur: PropTypes.func.isRequired,
-};
+FormInput.propTypes = inputTypes;

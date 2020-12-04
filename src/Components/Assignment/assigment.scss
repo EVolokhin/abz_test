@@ -3,7 +3,6 @@
   top: 60px;
   padding-top: 60px;
   padding-left: 30px;
-
   max-width: 1170px;
 
   background-image: url(../../Assets/banner-photo.jpg);
@@ -95,8 +94,6 @@
     &__header::after {
       content: 'We kindly remind you that your test assignment should be submitted as a link to github/bitbucket repository.';
       display: block;
-      // position: absolute;
-
       margin-top: 20px;
       margin-left: auto;
       margin-right: auto;
@@ -105,8 +102,6 @@
       text-transform: none;
       letter-spacing: normal;
       line-height: 24px;
-      // top: 190px;
-      // left: 15px;
     }
     
     &__text {

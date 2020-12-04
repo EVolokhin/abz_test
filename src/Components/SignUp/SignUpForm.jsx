@@ -9,6 +9,8 @@ import { Button } from '../Button/Button';
 import { validate } from './validate';
 import { postSignupForm } from '../api';
 
+import './signUpForm.scss';
+
 export const SignupForm = ({ setUsers }) => {
   const formik = useFormik({
     initialValues: {
