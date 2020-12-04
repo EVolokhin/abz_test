@@ -1,8 +1,8 @@
 # Test Task Abz.agency
 
-WEB page with responsive design (Min-width 360px, Max-width 2560px),
+WEB page with responsive design (Min-width 360px, Max-width 2560px).
 
-wich containes form for signup new user with data validation.
+It containes form for signup new user with data validation, burger menu with light animation.
 
 (REST API)
 
