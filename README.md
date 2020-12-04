@@ -1,7 +1,9 @@
 # Test Task Abz.agency
 
 WEB page with responsive design (Min-width 360px, Max-width 2560px),
+
 wich containes form for signup new user with data validation.
+
 (REST API)
 
 - [DEMO LINK](https://evolokhin.github.io/abz_test/)
