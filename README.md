@@ -1,12 +1,30 @@
-# React Starter Pack
-[DEMO](https://evolokhin.github.io/abz_test/)
+# Test Task Abz.agency
 
-#To use this template click `Use this template`
+WEB page with responsive design (Min-width 360px, Max-width 2560px),
+wich containes form for signup new user with data validation.
+(REST API)
 
-### Available Scripts
+- [DEMO LINK](https://evolokhin.github.io/abz_test/)
 
-`Deploy` - available to deploy your application to gh-pages
+## Description
+- Framework: - React;
+- Formik (form library for React);
+- HTML5 / CSS3;
+- CSS FlexBox
+- CSS Grid
+- Javascript;
+- Api;
+- BEM;
+- Sass;
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+## Local deployment
 
-`React router` - available to use dynamic routes to switch between pages
+### Installing
+* Fork and clone this repository
+* Run `npm install` in your terminal
+* Run `npm start`
+
+## Troubleshooting
+
+Any advise for common problems or issues.
+For any contributing or problem solving you could find me [LinkedIn](https://www.linkedin.com/in/yevhenii-volokhin-35250994/) and [Skype](https://join.skype.com/invite/cRzoxrymg4vx)
