@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // max-width: 1024px;
   max-width: 1170px;
-  // min-height: 1115px;
+
 
   background-color: #f9f9f3;
   
@@ -79,7 +78,7 @@
     }
   }
 
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 380px) {
     &__container {
       display: flex;
       flex-direction: column;
